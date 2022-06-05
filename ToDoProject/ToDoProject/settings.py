@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-sk4p14+364mx^cpmg(_6yekomqtoe+%ahds5d4i*aj9@%g252x"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*", "localhost"]
 
@@ -40,12 +40,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "ToDoApp",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -73,6 +75,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "ToDoProject.wsgi.application"
 
+CORS_ALLOWED_ORIGINS = [
+    "https://vuengo-todo-list.vercel.app",
+    "https://vuengo-todo-list-fraserwat.vercel.app",
+    "https://vuengo-todo-list-git-main-fraserwat.vercel.app",
+]
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
