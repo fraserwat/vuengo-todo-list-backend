@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
+from pickle import FALSE
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-sk4p14+364mx^cpmg(_6yekomqtoe+%ahds5d4i*aj9@%g252x"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = FALSE
 
-ALLOWED_HOSTS = ["*", "localhost"]
+ALLOWED_HOSTS = ["localhost", "https://vuengo-todo-list-backend.herokuapp.com/"]
 
 
 # Application definition
@@ -74,14 +75,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "ToDoProject.wsgi.application"
-
-CORS_ALLOWED_ORIGINS = [
-    "https://vuengo-todo-list.vercel.app",
-    "https://vuengo-todo-list-fraserwat.vercel.app",
-    "https://vuengo-todo-list-git-main-fraserwat.vercel.app",
-    "*localhost*",
-    "*",
-]
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -135,3 +128,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+CORS_ALLOWED_ORIGINS = [
+    "https://vuengo-todo-list.vercel.app",
+    "https://vuengo-todo-list-fraserwat.vercel.app",
+    "https://vuengo-todo-list-git-main-fraserwat.vercel.app",
+    "localhost",
+    "*",
+]
