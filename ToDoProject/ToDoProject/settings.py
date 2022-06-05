@@ -14,6 +14,8 @@ import os
 from pathlib import Path
 from pickle import FALSE
 
+from dotenv import find_dotenv, load_dotenv
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,13 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-sk4p14+364mx^cpmg(_6yekomqtoe+%ahds5d4i*aj9@%g252x"
+load_dotenv(find_dotenv())
+
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = FALSE
 
-ALLOWED_HOSTS = ["localhost", "vuengo-todo-list-backend.herokuapp.com"]
+ALLOWED_HOSTS = ["vuengo-todo-list-backend.herokuapp.com"]
 
 
 # Application definition
@@ -135,4 +138,3 @@ CORS_ALLOWED_ORIGINS = [
     "https://vuengo-todo-list-git-main-fraserwat.vercel.app",
     "https://vuengo-todo-list-cscrpcibc-fraserwat.vercel.app",
 ]
-CORS_ALLOW_ALL_ORIGINS = True
