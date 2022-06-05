@@ -1,0 +1,1 @@
+web: cd ToDoProject && gunicorn ToDoProject.wsgi
