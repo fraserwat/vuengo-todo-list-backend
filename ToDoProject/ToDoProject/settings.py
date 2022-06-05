@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-sk4p14+364mx^cpmg(_6yekomqtoe+%ahds5d4i*aj9@%g252x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = FALSE
 
-ALLOWED_HOSTS = ["localhost", "https://vuengo-todo-list-backend.herokuapp.com/"]
+ALLOWED_HOSTS = ["localhost", "vuengo-todo-list-backend.herokuapp.com"]
 
 
 # Application definition
