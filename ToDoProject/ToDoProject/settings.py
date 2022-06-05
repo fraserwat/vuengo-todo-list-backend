@@ -133,6 +133,6 @@ CORS_ALLOWED_ORIGINS = [
     "https://vuengo-todo-list.vercel.app",
     "https://vuengo-todo-list-fraserwat.vercel.app",
     "https://vuengo-todo-list-git-main-fraserwat.vercel.app",
-    "http://localhost:8080",
-    "*",
+    "https://vuengo-todo-list-cscrpcibc-fraserwat.vercel.app",
 ]
+CORS_ALLOW_ALL_ORIGINS = True
