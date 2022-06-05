@@ -79,6 +79,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://vuengo-todo-list.vercel.app",
     "https://vuengo-todo-list-fraserwat.vercel.app",
     "https://vuengo-todo-list-git-main-fraserwat.vercel.app",
+    "*localhost*",
+    "*",
 ]
 
 # Database
